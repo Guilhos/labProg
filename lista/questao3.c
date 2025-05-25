@@ -8,21 +8,6 @@ int compare_ints(const void *a, const void *b) {
     return ia - ib;
 }
 
-double mediana(int *array, int tamanho) {
-    // Ordena o array
-    qsort(array, tamanho, sizeof(int), compare_ints);
-
-    if (tamanho % 2 == 1) {
-        // Ímpar: elemento do meio
-        return array[tamanho / 2];
-    } else {
-        // Par: média dos dois do meio
-        int mid1 = array[(tamanho / 2) - 1];
-        int mid2 = array[tamanho / 2];
-        return (mid1 + mid2) / 2.0;
-    }
-}
-
 int activityNotifications(int *expenditure, int n, int d)
 {   
     int notific = 0;
@@ -38,7 +23,19 @@ int activityNotifications(int *expenditure, int n, int d)
             for (int i = 0; i < size; i++) {
                 sublista[i] = expenditure[start + i];
             }
-            double mediana_val = mediana(sublista, size);
+
+            qsort(sublista, size, sizeof(int), compare_ints);
+
+            double mediana_val;
+
+            if (size % 2 == 1) {
+                mediana_val = sublista[size / 2];
+            } else {
+                int mid1 = sublista[(size / 2) - 1];
+                int mid2 = sublista[size / 2];
+                mediana_val = (mid1 + mid2) / 2.0;
+            }
+
             if (expenditure[i] >= 2 * mediana_val) {
                 notific += 1;
             }
