@@ -1,4 +1,4 @@
-def activity_notifications(expenditure, d):
+def notify(expenditure, d):
     notific = 0
 
     for i in range(d, len(expenditure)):
@@ -15,21 +15,18 @@ def activity_notifications(expenditure, d):
     return notific
 
 def main():
-    try:
-        n, d = map(int, input().split())
-        if n < 1 or n > 200000 or d < 1 or d > n:
-            print("Entrada inválida.")
-            return
-
-        gastos = list(map(int, input().split()))
-        if len(gastos) != n or any(x < 0 or x > 200 for x in gastos):
-            print("Entrada inválida.")
-            return
-
-        resultado = activity_notifications(gastos, d)
-        print(resultado)
-    except:
+    n, d = map(int, input().split())
+    if n < 1 or n > 200000 or d < 1 or d > n:
         print("Entrada inválida.")
+        return
+
+    gastos = list(map(int, input().split()))
+    if len(gastos) != n or any(x < 0 or x > 200 for x in gastos):
+        print("Entrada inválida.")
+        return
+
+    resultado = notify(gastos, d)
+    print(resultado)
 
 if __name__ == "__main__":
     main()

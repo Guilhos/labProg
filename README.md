@@ -23,13 +23,7 @@ Dentro do array da semana, é pego uma sublista dos ultimos dias. Essa sublista 
 
 Depois é comparado com o valor do dia atual, se a mediana for menor a notificação é disparada.
 
-### Q4
-REGEX
+### Q4 e Q5
 
-Algoritmo de identificação de regex, primeiro é criado um "tradutor" do regex que entra, depois da tradução é criada uma árvore que irá fazer as operações aritimeticas. Dessa vez foi aplicado em python pois tenho mais familiaridade.
-
-### Q5
-Árvore e similaridade
-
-Foi criado uma árvore comum e depois aplicado uma procura nela para encontrar itens similares em sua estrutura. As entradas são as entradas padrão apresentadas pelo codigo do professor.
+As únicas formas de fazer a Q4 que descobri foi utilizando a arquitetura de árvores, porém ainda não estudei esse assunto em Estrutura de Dados e Algoritmos 1, o que se tornou um impeditivo de aplicar sem utilizar grande assistência de IA. O mesmo motivo acontece na Q5, que é puramente árvore.
 

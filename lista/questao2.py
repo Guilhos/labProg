@@ -1,6 +1,3 @@
-import sys
-import random
-
 def insertionSort(arr):
     deslocamentos = 0
     for i in range(1, len(arr)):

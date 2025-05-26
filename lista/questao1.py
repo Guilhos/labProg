@@ -1,6 +1,3 @@
-import sys
-import math
-
 MAX_ITER = 1000
 EPSILON = 1e-6
 
